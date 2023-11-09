@@ -1,0 +1,51 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "orval-repro",
+    "version": ""
+  },
+  "definitions": {},
+  "paths": {
+    "/test": {
+      "get": {
+        "operationId": "test",
+        "summary": "Simple repro",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "topEnum": {
+                  "type": "string",
+                  "enum": ["AAA", "BBB", "CCC"]
+                },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "deepEnum": {
+                        "type": "string",
+                        "enum": ["XXX", "YYY", "ZZZ"]
+                      }
+                    }
+                  },
+                  "additionalProperties": false,
+                  "required": ["deepEnum"]
+                }
+              },
+              "additionalProperties": false,
+              "required": ["topEnum", "data"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "basePath": "/",
+  "consumes": [ "application/json" ],
+  "produces": [ "application/json" ]
+}

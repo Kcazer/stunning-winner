@@ -1,0 +1,20 @@
+{
+  "name": "orval-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "codegen": "orval"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "axios": "^1.6.1",
+    "msw": "^2.0.4"
+  },
+  "devDependencies": {
+    "orval": "^6.19.1",
+    "prettier": "^3.0.3"
+  }
+}
